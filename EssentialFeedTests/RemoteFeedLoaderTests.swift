@@ -17,7 +17,7 @@ class RemoteFeedLoader {
     }
     
     func load() {
-        client.get(from: URL(string: "https://a.url.com")!)
+        client.get(from: url)
     }
 }
 
@@ -46,7 +46,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(url: URL = URL(string: "https://a.url.com")!) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
+    private func makeSUT(url: URL = URL(string: "https://b.url.com")!) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteFeedLoader(url: url, client: client)
         return (sut, client)
