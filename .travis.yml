@@ -1,0 +1,4 @@
+os: OSX
+osx_image: xode10.1
+language: swift
+script: xcodebuild clean
