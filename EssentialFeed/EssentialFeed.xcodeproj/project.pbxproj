@@ -164,11 +164,11 @@
 		2C0750C226BBFD1D00B338B6 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
-				2C0750C326BBFD3900B338B6 /* RemoteFeedLoader.swift */,
-				2C0750C526BD9D0D00B338B6 /* HTTPClient.swift */,
 				2C0750C726BD9D4400B338B6 /* FeedItemsMapper.swift */,
-				2CF8FD3126C823FD0016C5EA /* URLSessionHTTPClient.swift */,
+				2C0750C526BD9D0D00B338B6 /* HTTPClient.swift */,
 				2C720CD126CA3961007A3F02 /* RemoteFeedItem.swift */,
+				2C0750C326BBFD3900B338B6 /* RemoteFeedLoader.swift */,
+				2CF8FD3126C823FD0016C5EA /* URLSessionHTTPClient.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
