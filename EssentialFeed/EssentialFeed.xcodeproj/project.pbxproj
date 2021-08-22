@@ -23,6 +23,7 @@
 		2C1B1E5326D2ADC8002EBF01 /* ManagedFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B1E5226D2ADC8002EBF01 /* ManagedFeedImage.swift */; };
 		2C1B1E5B26D2AE76002EBF01 /* EssentialFeedCacheIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B1E5A26D2AE76002EBF01 /* EssentialFeedCacheIntegrationTests.swift */; };
 		2C1B1E5D26D2AE76002EBF01 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0750A126BBEF1400B338B6 /* EssentialFeed.framework */; };
+		2C1B1E6326D2CB7B002EBF01 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4C8C826C7E950009E6FC5 /* XCTestCase+MemoryLeakTracking.swift */; };
 		2C684DC526CA3F9F0041CB2F /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C684DC426CA3F9F0041CB2F /* LoadFeedFromCacheUseCaseTests.swift */; };
 		2C684DC826CA40970041CB2F /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C684DC726CA40970041CB2F /* FeedStoreSpy.swift */; };
 		2C684DCA26CCDF210041CB2F /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C684DC926CCDF210041CB2F /* ValidateFeedCacheUseCaseTests.swift */; };
@@ -272,6 +273,7 @@
 			children = (
 				2C720CCA26C97934007A3F02 /* CacheFeedUseCaseTests.swift */,
 				2C684DD226CE32670041CB2F /* CodableFeedStoreTests.swift */,
+				2C1B1E4526D263F9002EBF01 /* CoreDataFeedStoreTests.swift */,
 				2C684DD626D14FD40041CB2F /* FeedStoreSpecs.swift */,
 				2C684DC426CA3F9F0041CB2F /* LoadFeedFromCacheUseCaseTests.swift */,
 				2C684DC926CCDF210041CB2F /* ValidateFeedCacheUseCaseTests.swift */,
@@ -279,7 +281,6 @@
 				2C684DDA26D15CF90041CB2F /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */,
 				2C684DD826D1505B0041CB2F /* XCTestCase+FeedStoreSpecs.swift */,
 				2C684DC626CA408B0041CB2F /* Helpers */,
-				2C1B1E4526D263F9002EBF01 /* CoreDataFeedStoreTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -529,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1B1E5B26D2AE76002EBF01 /* EssentialFeedCacheIntegrationTests.swift in Sources */,
+				2C1B1E6326D2CB7B002EBF01 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
