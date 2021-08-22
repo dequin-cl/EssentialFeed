@@ -234,10 +234,8 @@
 		2C1B1E4C26D2AC94002EBF01 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				2C1B1E4D26D2AD0C002EBF01 /* CoreData */,
 				2C684DD426D018BA0041CB2F /* CodableFeedStore.swift */,
-				2C1B1E4726D26497002EBF01 /* CoreDataFeedStore.swift */,
-				2C1B1E4926D26615002EBF01 /* FeedStore.xcdatamodeld */,
+				2C1B1E4D26D2AD0C002EBF01 /* CoreData */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -245,9 +243,11 @@
 		2C1B1E4D26D2AD0C002EBF01 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				2C1B1E4726D26497002EBF01 /* CoreDataFeedStore.swift */,
 				2C1B1E4E26D2AD1A002EBF01 /* CoreDataHelpers.swift */,
 				2C1B1E5026D2AD8D002EBF01 /* ManagedCache.swift */,
 				2C1B1E5226D2ADC8002EBF01 /* ManagedFeedImage.swift */,
+				2C1B1E4926D26615002EBF01 /* FeedStore.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
