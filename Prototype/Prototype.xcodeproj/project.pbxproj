@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C7AB05A26D38941000FB410 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7AB05926D38941000FB410 /* FeedViewController.swift */; };
+		2C7AB05C26D38B42000FB410 /* FeedImageViewModel+PrototypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7AB05B26D38B42000FB410 /* FeedImageViewModel+PrototypeData.swift */; };
 		2C9BA76C26D3755A006E1B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9BA76B26D3755A006E1B5C /* AppDelegate.swift */; };
 		2C9BA76E26D3755A006E1B5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9BA76D26D3755A006E1B5C /* SceneDelegate.swift */; };
 		2C9BA77326D3755A006E1B5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9BA77126D3755A006E1B5C /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2C7AB05926D38941000FB410 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		2C7AB05B26D38B42000FB410 /* FeedImageViewModel+PrototypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageViewModel+PrototypeData.swift"; sourceTree = "<group>"; };
 		2C9BA76826D3755A006E1B5C /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9BA76B26D3755A006E1B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9BA76D26D3755A006E1B5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				2C9BA77626D3755C006E1B5C /* LaunchScreen.storyboard */,
 				2C9BA77926D3755C006E1B5C /* Info.plist */,
 				2C7AB05926D38941000FB410 /* FeedViewController.swift */,
+				2C7AB05B26D38B42000FB410 /* FeedImageViewModel+PrototypeData.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				2C9BA76C26D3755A006E1B5C /* AppDelegate.swift in Sources */,
 				2C7AB05A26D38941000FB410 /* FeedViewController.swift in Sources */,
 				2C9BA76E26D3755A006E1B5C /* SceneDelegate.swift in Sources */,
+				2C7AB05C26D38B42000FB410 /* FeedImageViewModel+PrototypeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
