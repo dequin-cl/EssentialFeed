@@ -188,6 +188,10 @@
 		2C93BDF126DCAC7300FCB2CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		2C93BDF326DCACBB00FCB2CE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "../../../../Prototype/Prototype/pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
 		2C93BDF426DCACBC00FCB2CE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		2C93BDF526DCACFA00FCB2CE /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "../../../../Prototype/Prototype/es-419.lproj/Feed.strings"; sourceTree = "<group>"; };
+		2C93BDF626DCACFA00FCB2CE /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Feed.strings"; sourceTree = "<group>"; };
+		2C93BDF726DCAD8300FCB2CE /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = ../../../../Prototype/Prototype/el.lproj/Feed.strings; sourceTree = "<group>"; };
+		2C93BDF826DCAD8400FCB2CE /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		2C9E982626DA29E9006DFE12 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 		2C9E982C26DA2B73006DFE12 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		2C9E982E26DA2BC0006DFE12 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -711,6 +715,8 @@
 				en,
 				Base,
 				"pt-BR",
+				"es-419",
+				el,
 			);
 			mainGroup = 2C07509726BBEF1400B338B6;
 			productRefGroup = 2C0750A226BBEF1400B338B6 /* Products */;
@@ -916,6 +922,8 @@
 			children = (
 				2C93BDE426DBF1CA00FCB2CE /* Base */,
 				2C93BDF326DCACBB00FCB2CE /* pt-BR */,
+				2C93BDF526DCACFA00FCB2CE /* es-419 */,
+				2C93BDF726DCAD8300FCB2CE /* el */,
 			);
 			name = Feed.storyboard;
 			sourceTree = "<group>";
@@ -925,6 +933,8 @@
 			children = (
 				2C93BDF126DCAC7300FCB2CE /* en */,
 				2C93BDF426DCACBC00FCB2CE /* pt-BR */,
+				2C93BDF626DCACFA00FCB2CE /* es-419 */,
+				2C93BDF826DCAD8400FCB2CE /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
