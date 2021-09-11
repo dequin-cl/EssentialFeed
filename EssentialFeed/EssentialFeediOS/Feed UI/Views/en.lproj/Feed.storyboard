@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Hkl-u1-yd5">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Hkl-u1-yd5" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,6 +146,7 @@ Location</string>
                         </connections>
                     </refreshControl>
                     <connections>
+                        <outlet property="errorView" destination="Hkl-u1-yd5" id="eft-v5-28j"/>
                         <outlet property="refreshController" destination="vC5-4Q-3Ro" id="fjQ-AE-ocN"/>
                     </connections>
                 </tableViewController>
