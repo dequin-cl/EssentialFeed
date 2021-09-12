@@ -21,9 +21,13 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAr-pv-Dwu">
                                     <rect key="frame" x="8" y="8" width="398" height="18"/>
+                                    <gestureRecognizers/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="zUQ-Zj-5it" appends="YES" id="tWO-Oc-aYB"/>
+                                    </connections>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -173,6 +177,11 @@ Location</string>
                         <outlet property="view" destination="ow4-2s-E45" id="Kue-6a-Rek"/>
                     </connections>
                 </customObject>
+                <tapGestureRecognizer id="zUQ-Zj-5it">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="Hkl-u1-yd5" id="56Q-P2-lZ8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1214.4927536231885" y="60.9375"/>
         </scene>
