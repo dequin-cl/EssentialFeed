@@ -57,10 +57,3 @@ struct FeedPresenter {
         loadingView.display(FeedLoadingViewModel(isLoading: false))
     }
 }
-
-extension Bundle {
-    static var current: Bundle {
-        class __ { }
-        return Bundle(for: __.self)
-    }
-}
