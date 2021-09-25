@@ -1,8 +1,5 @@
 //
-//  RemoteFeedItem.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 16-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation

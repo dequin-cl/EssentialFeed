@@ -1,21 +1,18 @@
 //
-//  CoreDataFeedStore.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 22-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import CoreData
 
-final public class CoreDataFeedStore: FeedStore {
+public final class CoreDataFeedStore: FeedStore {
     private let container: NSPersistentContainer
     private let context: NSManagedObjectContext
-    
+
     public init(storeURL: URL, bundle: Bundle = .main) throws {
         container = try NSPersistentContainer.load(modelName: "FeedStore", url: storeURL, in: bundle)
         context = container.newBackgroundContext()
     }
-    
+
     public func retrieve(completion: @escaping RetrievalCompletion) {
         perform { context in
             completion(Result {
@@ -25,7 +22,7 @@ final public class CoreDataFeedStore: FeedStore {
             })
         }
     }
-    
+
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         perform { context in
             completion(Result {
@@ -36,7 +33,7 @@ final public class CoreDataFeedStore: FeedStore {
             })
         }
     }
-    
+
     public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         perform { context in
             completion(Result {
@@ -46,7 +43,7 @@ final public class CoreDataFeedStore: FeedStore {
             })
         }
     }
-    
+
     private func perform(_ action: @escaping (NSManagedObjectContext) -> Void) {
         let context = self.context
         context.perform { action(context) }

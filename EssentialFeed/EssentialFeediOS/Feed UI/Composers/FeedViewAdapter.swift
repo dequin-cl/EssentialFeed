@@ -1,22 +1,19 @@
 //
-//  FeedViewAdapter.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 30-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
-import UIKit
 import EssentialFeed
+import UIKit
 
 final class FeedViewAdapter: FeedView {
     private weak var controller: FeedViewController?
     private let imageLoader: FeedImageDataLoader
-    
+
     init(controller: FeedViewController, imageLoader: FeedImageDataLoader) {
         self.controller = controller
         self.imageLoader = imageLoader
     }
-    
+
     func display(_ viewModel: FeedViewModel) {
         controller?.tableModel = viewModel.feed.map { model in
             let adapter = FeedImageDataLoaderPresentationAdapter<WeakRefVirtualProxy<FeedImageCellController>, UIImage>(model: model, imageLoader: imageLoader)

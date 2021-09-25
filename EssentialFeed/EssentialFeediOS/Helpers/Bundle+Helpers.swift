@@ -1,15 +1,12 @@
 //
-//  Bundle+Helpers.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 12-09-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation
 
 extension Bundle {
     static var current: Bundle {
-        class __ { }
+        class __ {}
         return Bundle(for: __.self)
     }
 }

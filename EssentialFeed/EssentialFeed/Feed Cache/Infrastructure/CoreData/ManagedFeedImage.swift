@@ -1,8 +1,5 @@
 //
-//  ManagedFeedImage.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 22-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import CoreData
@@ -27,7 +24,7 @@ extension ManagedFeedImage {
             return managed
         })
     }
-    
+
     var local: LocalFeedImage {
         LocalFeedImage(id: id, description: imageDescription, location: location, url: url)
     }

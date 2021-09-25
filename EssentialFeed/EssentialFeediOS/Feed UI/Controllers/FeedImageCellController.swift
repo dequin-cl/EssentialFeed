@@ -1,41 +1,38 @@
 //
-//  FeedImageCellController.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 28-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
-import UIKit
 import EssentialFeed
+import UIKit
 
 protocol FeedImageCellControllerDelegate {
     func didRequestImage()
     func didCancelImageRequest()
 }
 
-final class FeedImageCellController: FeedImageView {    
+final class FeedImageCellController: FeedImageView {
     private let delegate: FeedImageCellControllerDelegate
     private var cell: FeedImageCell?
-    
+
     init(delegate: FeedImageCellControllerDelegate) {
         self.delegate = delegate
     }
-    
+
     func view(in tableView: UITableView) -> UITableViewCell {
-        self.cell = tableView.dequeueReusableCell()
+        cell = tableView.dequeueReusableCell()
         delegate.didRequestImage()
         return cell!
     }
-    
+
     func preload() {
         delegate.didRequestImage()
     }
-    
+
     func cancelLoad() {
         releaseCellForReuse()
         delegate.didCancelImageRequest()
     }
-    
+
     func display(_ viewModel: FeedImageViewModel<UIImage>) {
         cell?.locationContainer.isHidden = !viewModel.hasLocation
         cell?.locationLabel.text = viewModel.location
@@ -45,7 +42,7 @@ final class FeedImageCellController: FeedImageView {
         cell?.feedImageRetryButton.isHidden = !viewModel.shouldRetry
         cell?.onRetry = delegate.didRequestImage
     }
-    
+
     private func releaseCellForReuse() {
         cell = nil
     }

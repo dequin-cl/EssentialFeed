@@ -1,8 +1,5 @@
 //
-//  FeedViewController.swift
-//  Prototype
-//
-//  Created by Iván GalazJeria on 23-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import UIKit
@@ -15,14 +12,14 @@ struct FeedImageViewModel {
 
 class FeedViewController: UITableViewController {
     private var feed = [FeedImageViewModel]()
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         refresh()
         tableView.setContentOffset(CGPoint(x: 0, y: -tableView.contentInset.top), animated: false)
     }
-    
+
     @IBAction func refresh() {
         refreshControl?.beginRefreshing()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
@@ -33,19 +30,19 @@ class FeedViewController: UITableViewController {
             self.refreshControl?.endRefreshing()
         }
     }
-    
+
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         feed.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedImageCell", for: indexPath) as! FeedImageCell
-        
+
         let model = feed[indexPath.row]
         cell.configure(with: model)
-        
+
         return cell
     }
 }
@@ -54,10 +51,10 @@ extension FeedImageCell {
     func configure(with model: FeedImageViewModel) {
         locationLabel.text = model.location
         locationContainer.isHidden = model.location == nil
-        
+
         descriptionLabel.text = model.description
         descriptionLabel.isHidden = model.description == nil
-        
+
         fadeIn(UIImage(named: model.imageName))
     }
 }

@@ -1,12 +1,8 @@
 //
-//  SharedTestHelpers.swift
-//  EssentialFeedTests
-//
-//  Created by Iván GalazJeria on 18-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation
-
 
 func anyNSError() -> NSError {
     return NSError(domain: "any error", code: 0)

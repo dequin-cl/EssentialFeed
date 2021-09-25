@@ -1,22 +1,19 @@
 //
-//  FeedImageCell.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 25-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import UIKit
 
 public final class FeedImageCell: UITableViewCell {
-    @IBOutlet private(set) public var locationContainer: UIView!
-    @IBOutlet private(set) public var locationLabel: UILabel!
-    @IBOutlet private(set) public var feedImageContainer: UIView!
-    @IBOutlet private(set) public var feedImageView: UIImageView!
-    @IBOutlet private(set) public var feedImageRetryButton: UIButton!
-    @IBOutlet private(set) public var descriptionLabel: UILabel!
-    
+    @IBOutlet public private(set) var locationContainer: UIView!
+    @IBOutlet public private(set) var locationLabel: UILabel!
+    @IBOutlet public private(set) var feedImageContainer: UIView!
+    @IBOutlet public private(set) var feedImageView: UIImageView!
+    @IBOutlet public private(set) var feedImageRetryButton: UIButton!
+    @IBOutlet public private(set) var descriptionLabel: UILabel!
+
     var onRetry: (() -> Void)?
-    
+
     @IBAction private func retryButtonTapped() {
         onRetry?()
     }

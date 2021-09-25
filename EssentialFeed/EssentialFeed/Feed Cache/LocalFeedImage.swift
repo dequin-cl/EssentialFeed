@@ -1,8 +1,5 @@
 //
-//  LocalFeedImage.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 16-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation
@@ -12,7 +9,7 @@ public struct LocalFeedImage: Equatable {
     public let description: String?
     public let location: String?
     public let url: URL
-    
+
     public init(id: UUID, description: String?, location: String?, url: URL) {
         self.id = id
         self.description = description

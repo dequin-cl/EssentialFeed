@@ -1,8 +1,5 @@
 //
-//  HTTPClient.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 06-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation

@@ -1,8 +1,5 @@
 //
-//  FeedImageViewModel.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 29-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation
@@ -13,7 +10,7 @@ struct FeedImageViewModel<Image> {
     let image: Image?
     var isLoading: Bool
     var shouldRetry: Bool
-    
+
     var hasLocation: Bool {
         location != nil
     }

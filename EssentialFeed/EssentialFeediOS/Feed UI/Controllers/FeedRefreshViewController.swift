@@ -1,12 +1,9 @@
 //
-//  FeedRefreshViewController.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 28-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
-import UIKit
 import EssentialFeed
+import UIKit
 
 protocol FeedRefreshViewControllerDelegate {
     func didRequestFeedRefresh()
@@ -14,13 +11,13 @@ protocol FeedRefreshViewControllerDelegate {
 
 final class FeedRefreshViewController: NSObject, FeedLoadingView {
     @IBOutlet private var view: UIRefreshControl?
-    
+
     var delegate: FeedRefreshViewControllerDelegate?
-    
+
     @IBAction func refresh() {
         delegate?.didRequestFeedRefresh()
     }
-    
+
     func display(_ viewModel: FeedLoadingViewModel) {
         view?.update(isRefreshing: viewModel.isLoading)
     }

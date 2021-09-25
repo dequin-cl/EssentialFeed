@@ -1,38 +1,35 @@
 //
-//  FeedImageCell+TestHelpers.swift
-//  EssentialFeediOSTests
-//
-//  Created by Iván GalazJeria on 28-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
-import UIKit
 import EssentialFeediOS
+import UIKit
 
 extension FeedImageCell {
     var isShowingLocation: Bool {
         !locationContainer.isHidden
     }
-    
+
     var locationText: String? {
         locationLabel.text
     }
-    
+
     var descriptionText: String? {
         descriptionLabel.text
     }
-    
+
     var isShowingImageLoadingIndicator: Bool {
         feedImageContainer.isShimmering
     }
-    
+
     var renderedImage: Data? {
         feedImageView.image?.pngData()
     }
-    
+
     var isShowingRetryAction: Bool {
         !feedImageRetryButton.isHidden
     }
-    
+
     func simulateRetryAction() {
         feedImageRetryButton.simulateTap()
     }

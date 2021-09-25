@@ -1,8 +1,5 @@
 //
-//  ManagedCache.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 22-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import CoreData
@@ -19,12 +16,12 @@ extension ManagedCache {
         request.returnsObjectsAsFaults = false
         return try context.fetch(request).first
     }
-    
+
     static func newUniqueInstance(in context: NSManagedObjectContext) throws -> ManagedCache {
         try find(in: context).map(context.delete)
         return ManagedCache(context: context)
     }
-    
+
     var localFeed: [LocalFeedImage] {
         feed.compactMap { ($0 as? ManagedFeedImage)?.local }
     }

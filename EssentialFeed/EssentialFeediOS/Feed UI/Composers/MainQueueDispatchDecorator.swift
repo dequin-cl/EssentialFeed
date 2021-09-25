@@ -1,21 +1,18 @@
 //
-//  MainQueueDispatchDecorator.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 30-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import EssentialFeed
 
 final class MainQueueDispatchDecorator<T> {
     private let decorated: T
-    
+
     init(decorated: T) {
         self.decorated = decorated
     }
-    
+
     func dispatch(completion: @escaping () -> Void) {
-        guard Thread.isMainThread  else {
+        guard Thread.isMainThread else {
             return DispatchQueue.main.async(execute: completion)
         }
 

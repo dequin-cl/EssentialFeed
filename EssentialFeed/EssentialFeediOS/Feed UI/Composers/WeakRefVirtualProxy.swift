@@ -1,16 +1,13 @@
 //
-//  WeakRefVirtualProxy.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 30-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
-import UIKit
 import EssentialFeed
+import UIKit
 
 final class WeakRefVirtualProxy<Type: AnyObject> {
     private weak var object: Type?
-    
+
     init(_ object: Type) {
         self.object = object
     }

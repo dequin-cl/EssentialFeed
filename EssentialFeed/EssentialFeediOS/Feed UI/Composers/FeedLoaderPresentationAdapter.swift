@@ -1,8 +1,5 @@
 //
-//  FeedLoaderPresentationAdapter.swift
-//  EssentialFeediOS
-//
-//  Created by Iván GalazJeria on 30-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import EssentialFeed
@@ -10,14 +7,14 @@ import EssentialFeed
 final class FeedLoaderPresentationAdapter: FeedRefreshViewControllerDelegate {
     private let feedLoader: FeedLoader
     var presenter: FeedPresenter?
-    
+
     init(feedLoader: FeedLoader) {
         self.feedLoader = feedLoader
     }
-    
+
     func didRequestFeedRefresh() {
         presenter?.didStartLoadingFeed()
-        
+
         feedLoader.load { [weak self] result in
             switch result {
             case let .success(feed):

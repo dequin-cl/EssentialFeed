@@ -1,17 +1,12 @@
 //
-//  EssentialFeedAPIEndToEndTests.swift
-//  EssentialFeedAPIEndToEndTests
-//
-//  Created by Iván GalazJeria on 14-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
-import XCTest
 import EssentialFeed
+import XCTest
 
 class EssentialFeedAPIEndToEndTests: XCTestCase {
-    
     func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
-
         switch getFeedResult() {
         case let .success(imageFeed):
             XCTAssertEqual(imageFeed.count, 8, "Expected 8 images in the test account image feed")
@@ -30,8 +25,9 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             XCTFail("Expected successful feed result, got no result instead")
         }
     }
-    
+
     // MARK: - Helpers
+
     private func getFeedResult(file: StaticString = #filePath, line: UInt = #line) -> FeedLoader.Result? {
         let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
         let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
@@ -39,18 +35,18 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
         trackForMemoryLeaks(client, file: file, line: line)
         trackForMemoryLeaks(loader, file: file, line: line)
         let exp = expectation(description: "Wait for load completion")
-        
+
         var receivedResult: FeedLoader.Result?
         loader.load { result in
             receivedResult = result
             exp.fulfill()
         }
-        
+
         wait(for: [exp], timeout: 10.0)
-        
+
         return receivedResult
     }
-    
+
     private func expectedImage(at index: Int) -> FeedImage {
         FeedImage(
             id: id(at: index),
@@ -59,7 +55,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             url: imageURL(at: index)
         )
     }
-    
+
     private func id(at index: Int) -> UUID {
         UUID(uuidString: [
             "73A7F70C-75DA-4C2E-B5A3-EED40DC53AA6",
@@ -69,7 +65,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             "DC97EF5E-2CC9-4905-A8AD-3C351C311001",
             "557D87F1-25D3-4D77-82E9-364B2ED9CB30",
             "A83284EF-C2DF-415D-AB73-2A9B8B04950B",
-            "F79BD7F8-063F-46E2-8147-A67635C3BB01"
+            "F79BD7F8-063F-46E2-8147-A67635C3BB01",
         ][index])!
     }
 
@@ -81,10 +77,9 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
          "Description 5",
          "Description 6",
          "Description 7",
-         "Description 8"
-        ][index]
+         "Description 8"][index]
     }
-    
+
     private func location(at index: Int) -> String? {
         ["Location 1",
          "Location 2",
@@ -93,12 +88,10 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
          "Location 5",
          "Location 6",
          "Location 7",
-         "Location 8"
-        ][index]
+         "Location 8"][index]
     }
-    
+
     private func imageURL(at index: Int) -> URL {
         URL(string: "https://url-\(index + 1).com")!
     }
-
 }

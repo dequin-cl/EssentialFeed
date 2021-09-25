@@ -1,8 +1,5 @@
 //
-//  FeedViewModel.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 12-09-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation

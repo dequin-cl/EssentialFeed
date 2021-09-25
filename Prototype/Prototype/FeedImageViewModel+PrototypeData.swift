@@ -1,8 +1,5 @@
 //
-//  FeedImageViewModel+PrototypeData.swift
-//  Prototype
-//
-//  Created by Iván GalazJeria on 23-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation
@@ -39,7 +36,7 @@ extension FeedImageViewModel {
                 description: "Glorious day in Brighton!! 🎢",
                 location: "Brighton Seafront",
                 imageName: "image-5"
-            )
+            ),
         ]
     }
 }

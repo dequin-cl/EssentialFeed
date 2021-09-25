@@ -1,16 +1,12 @@
 //
-//  FeedUIIntegrationTests+Localization.swift
-//  EssentialFeediOSTests
-//
-//  Created by Iván GalazJeria on 30-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
+import EssentialFeed
 import Foundation
 import XCTest
-import EssentialFeed
 
 extension FeedUIIntegrationTests {
-    
     func localized(_ key: String, file: StaticString = #file, line: UInt = #line) -> String {
         let table = "Feed"
         let bundle = Bundle(for: FeedPresenter.self)

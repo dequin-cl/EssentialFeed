@@ -1,8 +1,5 @@
 //
-//  URLSessionHTTPClient.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 14-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation
@@ -12,20 +9,20 @@ public final class URLSessionHTTPClient: HTTPClient {
     public init(session: URLSession) {
         self.session = session
     }
-    
+
     private struct UnexpectedValuesRepresentations: Error {}
-    
+
     private struct URLSessionTaskWrapper: HTTPClientTask {
         let wrapped: URLSessionTask
-        
+
         func cancel() {
             wrapped.cancel()
         }
     }
-    
+
     public func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         let task = session.dataTask(with: url) { data, response, error in
-            completion(Result{
+            completion(Result {
                 if let error = error {
                     throw error
                 } else if let data = data, let response = response as? HTTPURLResponse {

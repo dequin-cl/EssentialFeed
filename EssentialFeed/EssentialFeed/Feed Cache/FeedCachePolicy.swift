@@ -1,14 +1,10 @@
 //
-//  FeedCachePolicy.swift
-//  EssentialFeed
-//
-//  Created by Iván GalazJeria on 19-08-21.
+// Copyright © 2021 dequin_cl. All rights reserved.
 //
 
 import Foundation
 
 enum FeedCachePolicy {
-    
     private static let calendar = Calendar(identifier: .gregorian)
     private static var maxCacheAgeInDays: Int { 7 }
 
