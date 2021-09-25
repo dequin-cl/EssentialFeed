@@ -6,6 +6,7 @@ import EssentialFeed
 import XCTest
 
 final class RemoteFeedImageDataLoaderTests: XCTestCase {
+    
     func test_init_doesNotPerformAnyURLRequest() {
         let (_, client) = makeSUT()
 
@@ -31,15 +32,13 @@ final class RemoteFeedImageDataLoaderTests: XCTestCase {
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
 
-    func test_loadImageDataFromURL_deliversErrorOnClientError() {
+    func test_loadImageDataFromURL_deliversConnectivityErrorOnClientError() {
         let (sut, client) = makeSUT()
         let clientError = NSError(domain: "a client error", code: 0)
 
-        expect(
-            sut,
-            toCompleteWith: .failure(clientError),
-            when: { client.complete(with: clientError) }
-        )
+        expect(sut, toCompleteWith: failure(.connectivity), when: {
+            client.complete(with: clientError)
+        })
     }
 
     func test_loadImageDataFromURL_deliversInvalidadDataErrorOnNon200HTTPResponse() {
